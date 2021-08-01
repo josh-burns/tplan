@@ -4,6 +4,7 @@ const { exec } = require("child_process");
 const config = new Conf();
 
 function latest() {
+  const editor = config.get("editor");
   if (
     !config.get(
       "defaultLocation" || config.get("defaultLocation").includes("undefined")
@@ -26,7 +27,8 @@ function latest() {
   }
   let ticketPath = config.get("currentTicket");
 
-  exec("code " + ticketPath);
+  exec(editor + " " + ticketPath);
+  process.exit(0);
 }
 
 module.exports = latest;

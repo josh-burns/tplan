@@ -79,6 +79,9 @@ function runSetupProcess(location) {
 
     console.log(chalk.green("\n\n") + "Done" + "\n\n");
     console.log(chalk.green("Created tPlan repo at: " + fullLocation + "\n\n"));
+    console.log(
+      "default editor is vsCode - Run `tplan seteditor` to change to Vim, VScode or Atom"
+    );
   } catch (error) {
     console.log(error);
   }

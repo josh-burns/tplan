@@ -45,6 +45,10 @@ TODO
 
   - Set current ticket
 
+- Set default text editor 
+  - Sets the editor from vscode, atom, subl or vim
+
+
 - list
   - List all current test plans
   - Is it really needed?

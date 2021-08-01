@@ -6,22 +6,11 @@ const newPlan = require("./commands/newPlan");
 const latest = require("./commands/latest");
 const reset = require("./commands/reset");
 const setDefault = require("./commands/setDefault");
+const setEdit = require("./commands/setEditor");
+
 const Conf = require("conf");
-const chalk = require("chalk");
 
 const config = new Conf();
-
-// console.log(
-//   "\n\n" +
-//     chalk.black.bgYellow.bold(
-//       "default location is " + config.get("defaultLocation")
-//     ) +
-//     "\n\n" +
-//     chalk.black.bgYellow.bold(
-//       "current ticket is " + config.get("currentTicket")
-//     ) +
-//     "\n\n"
-// );
 
 program
   .command("init")
@@ -47,5 +36,12 @@ program
   .command("setdefault <setDefault>")
   .description("set the default directory for tPlan")
   .action(setDefault);
+
+program
+  .command("seteditor <setEdit>")
+  .description(
+    "set the default text editor for tPlan -  options 'atom' 'code' 'subl'"
+  )
+  .action(setEdit);
 
 program.parse();

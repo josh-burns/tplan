@@ -23,6 +23,7 @@ const Conf = require("conf");
 const config = new Conf();
 
 function newPlan(ticket) {
+  const editor = config.get("editor");
   if (!config.get("defaultLocation")) {
     console.log(
       "It looks like you do not have a default location. Please run `tplan init` and try again"
@@ -32,7 +33,6 @@ function newPlan(ticket) {
 
   let ticketDirectory = config.get("defaultLocation");
   let pathToCreateTicket = ticketDirectory + "/" + ticket;
-
 
   console.log(
     chalk.green(
@@ -60,7 +60,7 @@ function newPlan(ticket) {
   let finalPath = pathToCreateTicket + "/" + ticket + ".md";
   let output = render(template, fields);
   fs.writeFileSync(finalPath, output);
-  exec("code " + finalPath);
+  exec(editor + " " + finalPath);
   config.set("currentTicket", finalPath);
   process.exit(0);
 }
