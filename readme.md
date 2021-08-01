@@ -1,3 +1,7 @@
+# tPlan
+
+A simple CLI tool for generating test plan documents.
+
 ```
 Usage: tplan [options] [command]
 
@@ -10,8 +14,8 @@ Commands:
   latest                   Open the latest ticket (if exists)
   reset                    reset the default directory for test plans
   setdefault <setDefault>  set the default directory for tPlan
+  seteditor <setEdit>      set the default text editor for tPlan -  options 'atom' 'code' 'subl'
   help [command]           display help for command
-----------------------------------------------------------
 ```
 
 TODO
@@ -45,9 +49,9 @@ TODO
 
   - Set current ticket
 
-- Set default text editor 
-  - Sets the editor from vscode, atom, subl or vim
+- Set default text editor
 
+  - Sets the editor from vscode, atom, subl or vim
 
 - list
   - List all current test plans
