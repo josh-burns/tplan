@@ -33,6 +33,7 @@ function newPlan(ticket) {
   let ticketDirectory = config.get("defaultLocation");
   let pathToCreateTicket = ticketDirectory + "/" + ticket;
 
+
   console.log(
     chalk.green(
       "\n\n" +
