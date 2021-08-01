@@ -1,6 +1,6 @@
 {
   "name": "tplan",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "TODO",
   "main": "index.js",
   "bin": {
